@@ -1,18 +1,201 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:padding="10dp"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TextView android:id="@+id/display"
+        android:gravity="bottom|end"
+        android:textColor="@color/colorDark"
+        android:text="@string/default_display"
+        android:textSize="50sp"
+        android:maxLength="12"
+        android:background="@color/colorClair"
+        android:layout_width="match_parent"
+        android:layout_height="250sp" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/signClear"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:onClick="onDigit"
+            android:text="@string/signClear"
+            android:textSize="20sp"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/signPlus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:text="@string/signPlus"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+ 
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="2dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button android:id="@+id/keySeven" 
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/keySeven"/>
+
+        <Button android:id="@+id/keyEight"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/keyEight"/>
+
+        <Button android:id="@+id/keyNine"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/keyNine"/>
+
+        <Button android:id="@+id/signDivide"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/signDivide"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="2dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        
+        <Button android:id="@+id/keyFour"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/keyFour"/>
+
+        <Button android:id="@+id/keyFive"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/keyFive"/>
+
+        <Button android:id="@+id/keySix"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/keySix"/>
+
+        <Button android:id="@+id/signTimes"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/signTimes"/>
+        
+        </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="2dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button android:id="@+id/keyOne"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/keyOne"/>
+
+        <Button android:id="@+id/keyTwo"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/keyTwo"/>
+
+        <Button android:id="@+id/keyTree"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/keyTree"/>
+
+        <Button android:id="@+id/signMinus"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/signMinus"/>
+
+    </LinearLayout>
+
+    <LinearLayout android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_marginTop="2dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button android:id="@+id/keyZero"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/keyZero"/>
+
+        <Button android:id="@+id/signDecimal"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/signDecimal"/>
+
+        <Button android:id="@+id/signEquals"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:onClick="onDigit"
+            android:textSize="20sp"
+            android:text="@string/signEquals"/>
+
+    </LinearLayout>
+
+</LinearLayout>

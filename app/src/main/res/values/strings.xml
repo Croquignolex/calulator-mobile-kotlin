@@ -1,4 +1,27 @@
 <resources>
     <string name="app_name">Calculator</string>
     <string name="default_image_alt">…</string>
+    <!--Display-->
+    <string name="default_display">0</string>
+    <!--Keyboard digit-->
+    <string name="keyZero">0</string>
+    <string name="keyOne">1</string>
+    <string name="keyTwo">2</string>
+    <string name="keyTree">3</string>
+    <string name="keyFour">4</string>
+    <string name="keyFive">5</string>
+    <string name="keySix">6</string>
+    <string name="keySeven">7</string>
+    <string name="keyEight">8</string>
+    <string name="keyNine">9</string>
+    <!--Keyboard sign-->
+    <string name="signPlus">+</string>
+    <string name="signMinus">-</string>
+    <string name="signTimes">x</string>
+    <string name="signDivide">/</string>
+    <string name="signEquals">=</string>
+    <string name="signDecimal">.</string>
+    <string name="signClear">CE</string>
+    <!--Error-->
+    <string name="error">Error</string>
 </resources>
