@@ -8,7 +8,7 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView android:id="@+id/display"
+    <TextView android:id="@+id/displayScreen"
         android:gravity="bottom|end"
         android:textColor="@color/colorDark"
         android:text="@string/default_display"
@@ -18,8 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="250sp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <LinearLayout android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="2dp"
         android:layout_weight="1"
@@ -30,9 +29,10 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="3"
-            android:onClick="onDigit"
+            android:onClick="onClear"
             android:text="@string/signClear"
             android:textSize="20sp"
+            android:backgroundTint="@color/colorDark"
             tools:ignore="NestedWeights" />
 
         <Button
@@ -40,7 +40,9 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onSignOperation"
+            android:textColor="@color/colorWhite"
+            android:backgroundTint="@color/colorThemeDark"
             android:text="@string/signPlus"
             android:textSize="20sp" />
 
@@ -52,7 +54,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <Button android:id="@+id/keySeven" 
+        <Button android:id="@+id/keySeven"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -80,8 +82,10 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onSignOperation"
             android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:backgroundTint="@color/colorThemeDark"
             android:text="@string/signDivide"/>
 
     </LinearLayout>
@@ -120,8 +124,10 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onSignOperation"
             android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:backgroundTint="@color/colorThemeDark"
             android:text="@string/signTimes"/>
         
         </LinearLayout>
@@ -160,8 +166,10 @@
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:onClick="onDigit"
+            android:onClick="onSignOperation"
             android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:backgroundTint="@color/colorThemeDark"
             android:text="@string/signMinus"/>
 
     </LinearLayout>
@@ -184,7 +192,7 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:onClick="onDigit"
+            android:onClick="onDecimal"
             android:textSize="20sp"
             android:text="@string/signDecimal"/>
 
@@ -192,8 +200,10 @@
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="match_parent"
-            android:onClick="onDigit"
+            android:onClick="onSignOperation"
             android:textSize="20sp"
+            android:textColor="@color/colorWhite"
+            android:backgroundTint="@color/colorDark"
             android:text="@string/signEquals"/>
 
     </LinearLayout>
