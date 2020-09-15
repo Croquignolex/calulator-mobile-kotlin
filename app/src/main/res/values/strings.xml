@@ -24,4 +24,10 @@
     <string name="signClear">CE</string>
     <!--Error-->
     <string name="error">Error</string>
+
+    <string name="developer_name" style="text-decoration:none">
+        <a href="https://croquignolex-tikiton.dmsemergence.com/">
+            By Croquignolex Tikiton
+        </a>
+    </string>
 </resources>
