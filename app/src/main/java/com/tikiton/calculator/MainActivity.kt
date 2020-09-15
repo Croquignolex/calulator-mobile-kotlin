@@ -4,6 +4,7 @@ import android.os.Build
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.appcompat.app.AppCompatActivity
@@ -19,6 +20,7 @@ const val SIGN_EQUALS_VALUE = "="
 
 class MainActivity : AppCompatActivity() {
     // Data
+    private var backPressedTime: Long = 0
     private var isEqualActive: Boolean = false
     private var isOneOperatorActive: Boolean = false
     private var previousOperand: String = EMPTY_STRING
@@ -33,6 +35,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+    }
+
+    // Handle back button pressed
+    override fun onBackPressed() {
+        if((backPressedTime + 2000) > System.currentTimeMillis()) {
+            // Can exit if there is 2 seconds between the back button double tap
+            super.onBackPressed()
+        } else {
+            // Neither toast call to action message
+            Toast.makeText(
+                applicationContext,
+                "Appuiyez à nouveau pour quitter",
+                Toast.LENGTH_SHORT
+            ).show()
+        }
+        // Update user back pressed time
+        backPressedTime = System.currentTimeMillis()
     }
 
     // Fired when digit is clicked
